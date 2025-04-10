@@ -26,6 +26,13 @@ app.use(express.json());
 // Store OTPs in a simple in-memory object
 const otpStore: Record<string, string> = {};
 
+
+app.get("/" , (req,res)=>{
+    res.send("punjabi aa agaya oooi")
+})
+
+
+
 // Endpoint to generate and log OTP with rate limiting
 app.post('/generate-otp', (req : any , res:any ) => {
     console.log(req.body);
