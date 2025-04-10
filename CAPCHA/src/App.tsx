@@ -1,7 +1,7 @@
-import { Turnstile } from '@marsidev/react-turnstile'
+// import { Turnstile } from '@marsidev/react-turnstile'
 
 import './App.css'
-import axios from 'axios'
+// import axios from 'axios'
 import { useState } from 'react'
 
 function App() {
@@ -11,19 +11,19 @@ function App() {
     <>
       <input placeholder='OTP'></input>
       <input placeholder='New password'></input>
-
+{/* 
       <Turnstile onSuccess={(token) => {
         setToken(token)
       }} siteKey='0x4AAAAAAAXtEe2JIeAEUcjX' >
-      akash</Turnstile>
+      akash</Turnstile> */}
 
-      <button onClick={() => {
+      {/* <button onClick={() => {
         axios.post("http://localhost:3000/reset-password", {
           email: "harkirat@gmail.com",
           otp: "123456",
           token: token,
         })
-      }}>Update password</button>
+      }}>Update password</button> */}
     </>
   )
 }
