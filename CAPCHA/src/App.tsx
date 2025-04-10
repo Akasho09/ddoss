@@ -15,7 +15,8 @@ function App() {
       <Turnstile onSuccess={(token) => {
         setToken(token)
       }} siteKey='0x4AAAAAABIAKmQiaS3Mlm4b' >
-      akash</Turnstile>
+      CAPTCHA VERIFICATION IS ON ! 
+      </Turnstile>
 
       <button onClick={() => {
         axios.post("http://localhost:3000/reset-password", {

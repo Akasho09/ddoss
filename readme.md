@@ -26,7 +26,12 @@ There are various freely available captchas, Cloudflare `Turnstile` is one of th
 ### Tuenstile 
 - Cloudflare will give you:
 
-1. Site key (used in frontend)
+1. Site key (used in frontend) : 
+      <Turnstile onSuccess={(token) => {
+        setToken(token)
+      }} siteKey='0x4AAAAAABIAKmQiaS3Mlm4b' >
+      CAPTCHA VERIFICATION IS ON ! 
+      </Turnstile>
 
 2. Secret key (used in backend to verify)
 
