@@ -34,6 +34,20 @@ There are various freely available captchas, Cloudflare `Turnstile` is one of th
       </Turnstile>
 
 2. Secret key (used in backend to verify)
+  const { email, otp, newPassword, token } = req.body;
+  let formData = new FormData();
+	formData.append('secret', SECRET_KEY);
+	formData.append('response', token);
 
+  const url = 'https://challenges.cloudflare.com/turnstile/v0/siteverify';
+	const result = await fetch(url, {
+		body: formData,
+		method: 'POST',
+	});
+  const challengeSucceeded = (await result.json()).success;
+
+  if (!challengeSucceeded) {
+    return res.status(403).json({ message: "Invalid reCAPTCHA token" });
+  }
 
 ![alt text](image.png)

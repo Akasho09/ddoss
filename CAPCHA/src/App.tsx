@@ -19,7 +19,7 @@ function App() {
       </Turnstile>
 
       <button onClick={() => {
-        axios.post("http://localhost:3000/reset-password", {
+        axios.post("https://ddoss-cl14.onrender.com/reset-password", {
           email: "harkirat@gmail.com",
           otp: "123456",
           token: token,
