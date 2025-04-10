@@ -5,7 +5,7 @@ import './App.css'
 import { useState } from 'react'
 
 function App() {
-  const [token, setToken] = useState<string>("")
+  // const [token, setToken] = useState<string>("")
 
   return (
     <>
